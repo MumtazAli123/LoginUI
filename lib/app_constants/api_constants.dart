@@ -1,3 +1,3 @@
 class APIConstants {
-  // static const BASE_URL = "https://www.abc.com";
+  static const BASE_URL = "https://www.abc.com";
 }
