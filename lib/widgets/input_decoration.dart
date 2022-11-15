@@ -5,9 +5,9 @@ class UIConfig {
     return InputDecoration(
       isDense: true,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
       fillColor: Colors.blue,
       hintText: hintText,
       labelText: labelText,

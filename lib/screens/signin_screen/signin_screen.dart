@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/screens/signout_screen/signout_screen.dart';
+import 'package:untitled1/screens/sidebar_screen/sidebar_screen.dart';
 import 'package:untitled1/widgets/custom_bottom.dart';
 import 'package:untitled1/widgets/input_decoration.dart';
 
@@ -9,6 +9,7 @@ class SigningScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const SideBarScreen(),
       appBar: _buildAppBar(),
       body: _buildBody(),
     );
@@ -17,7 +18,14 @@ class SigningScreen extends StatelessWidget {
 
 _buildAppBar() {
   return AppBar(
-    title: const Text("Signing Screen"),
+    title: const Text("AppBar"),
+    centerTitle: true,
+    actions: const <Widget>[
+      Icon(Icons.notifications),
+      Icon(
+        Icons.verified,
+      ),
+    ],
   );
 }
 
@@ -47,21 +55,18 @@ _buildBody() {
                 decoration: UIConfig().inputDecoration('Your Name', "Name"),
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(top: 11, bottom: 11),
-              child: TextField(
-                decoration: UIConfig().inputDecoration('Your Email', "Email"),
-              ),
+            TextField(
+              decoration: UIConfig().inputDecoration('Your Email', "Email"),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 11),
-              child: TextField(
-                decoration: UIConfig().inputDecoration(
-                  'Your Password',
-                  'Password',
-                ),
-                obscureText: true,
+            const SizedBox(
+              height: 11,
+            ),
+            TextField(
+              decoration: UIConfig().inputDecoration(
+                'Your Password',
+                'Password',
               ),
+              obscureText: true,
             ),
             Container(
               margin: const EdgeInsets.all(21),
