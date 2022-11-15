@@ -39,26 +39,29 @@ _buildBody() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-                margin: const EdgeInsets.only(bottom: 20),
-                child: const Text(
-                  " Login  ",
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
-                )),
-            Container(
-              margin: const EdgeInsets.only(top: 11, bottom: 11),
-              child: TextField(
-                decoration: UIConfig()
-                    .inputDecoration('Your Email', "Email", Icons.email),
+            const Text(
+              " Login  ",
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
+            ),
+            TextField(
+              decoration: UIConfig().inputDecoration(
+                'Your Email',
+                "Email",
+                Icons.email,
+                null,
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(top: 11),
-              child: TextField(
-                decoration: UIConfig()
-                    .inputDecoration('Your Password', 'Password', Icons.lock),
-                obscureText: true,
+            const SizedBox(
+              height: 11,
+            ),
+            TextFormField(
+              decoration: UIConfig().inputDecoration(
+                'Your Password',
+                'Password',
+                Icons.lock,
+                Icons.visibility,
               ),
+              obscureText: true,
             ),
             Container(
               margin: const EdgeInsets.all(21),

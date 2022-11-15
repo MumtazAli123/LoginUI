@@ -3,13 +3,17 @@ import 'package:untitled1/screens/sidebar_screen/sidebar_screen.dart';
 import 'package:untitled1/widgets/custom_bottom.dart';
 import 'package:untitled1/widgets/input_decoration.dart';
 
-class SigningScreen extends StatelessWidget {
+class SigningScreen extends StatefulWidget {
   const SigningScreen({Key? key}) : super(key: key);
 
   @override
+  State<SigningScreen> createState() => _SigningScreenState();
+}
+
+class _SigningScreenState extends State<SigningScreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const SideBarScreen(),
       appBar: _buildAppBar(),
       body: _buildBody(),
     );
@@ -53,23 +57,24 @@ _buildBody() {
               margin: const EdgeInsets.only(bottom: 11),
               child: TextField(
                 decoration: UIConfig()
-                    .inputDecoration('Your Name', "Name", Icons.person),
+                    .inputDecoration('Your Name', "Name", Icons.person, null),
               ),
             ),
             TextField(
               decoration: UIConfig()
-                  .inputDecoration('Your Email', "Email", Icons.email),
+                  .inputDecoration('Your Email', "Email", Icons.email, null),
             ),
             const SizedBox(
               height: 11,
             ),
-            TextField(
+            TextFormField(
+              obscureText: true,
               decoration: UIConfig().inputDecoration(
                 'Your Password',
                 'Password',
                 Icons.lock,
+                Icons.visibility,
               ),
-              obscureText: true,
             ),
             Container(
               margin: const EdgeInsets.all(21),
