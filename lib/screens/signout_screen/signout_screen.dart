@@ -48,16 +48,15 @@ _buildBody() {
             Container(
               margin: const EdgeInsets.only(top: 11, bottom: 11),
               child: TextField(
-                decoration: UIConfig().inputDecoration('Your Email', "Email"),
+                decoration: UIConfig()
+                    .inputDecoration('Your Email', "Email", Icons.email),
               ),
             ),
             Container(
               margin: const EdgeInsets.only(top: 11),
               child: TextField(
-                decoration: UIConfig().inputDecoration(
-                  'Your Password',
-                  'Password',
-                ),
+                decoration: UIConfig()
+                    .inputDecoration('Your Password', 'Password', Icons.lock),
                 obscureText: true,
               ),
             ),

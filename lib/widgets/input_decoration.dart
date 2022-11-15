@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class UIConfig {
-  InputDecoration inputDecoration(String hintText, String labelText) {
+  InputDecoration inputDecoration(
+    String hintText,
+    String labelText,
+    IconData prefixIcon,
+  ) {
     return InputDecoration(
       isDense: true,
       border: OutlineInputBorder(

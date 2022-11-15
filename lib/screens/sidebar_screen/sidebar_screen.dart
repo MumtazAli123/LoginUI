@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/screens/signin_screen/signin_screen.dart';
 import 'package:untitled1/screens/signout_screen/signout_screen.dart';
 
 class SideBarScreen extends StatelessWidget {
@@ -11,8 +10,8 @@ class SideBarScreen extends StatelessWidget {
       child: ListView(
         children: [
           UserAccountsDrawerHeader(
-            accountName: Text("Ali"),
-            accountEmail: Text("ali@gmail.com"),
+            accountName: const Text("Ali"),
+            accountEmail: const Text("ali@gmail.com"),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset(

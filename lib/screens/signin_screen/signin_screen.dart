@@ -52,11 +52,13 @@ _buildBody() {
             Container(
               margin: const EdgeInsets.only(bottom: 11),
               child: TextField(
-                decoration: UIConfig().inputDecoration('Your Name', "Name"),
+                decoration: UIConfig()
+                    .inputDecoration('Your Name', "Name", Icons.person),
               ),
             ),
             TextField(
-              decoration: UIConfig().inputDecoration('Your Email', "Email"),
+              decoration: UIConfig()
+                  .inputDecoration('Your Email', "Email", Icons.email),
             ),
             const SizedBox(
               height: 11,
@@ -65,6 +67,7 @@ _buildBody() {
               decoration: UIConfig().inputDecoration(
                 'Your Password',
                 'Password',
+                Icons.lock,
               ),
               obscureText: true,
             ),
