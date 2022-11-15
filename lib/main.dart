@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/screens/home_screen/home_screen.dart';
 import 'package:untitled1/screens/signin_screen/signin_screen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My App',
-      home: SigningScreen(),
+      home: HomeScreen(),
     );
   }
 }

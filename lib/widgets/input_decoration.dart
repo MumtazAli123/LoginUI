@@ -4,7 +4,8 @@ class UIConfig {
   InputDecoration inputDecoration(
     String hintText,
     String labelText,
-    IconData prefixIcon,
+    IconData? prefixIcon,
+    IconData? suffixIcn,
   ) {
     return InputDecoration(
       isDense: true,
@@ -15,6 +16,8 @@ class UIConfig {
       fillColor: Colors.blue,
       hintText: hintText,
       labelText: labelText,
+      prefixIcon: Icon(prefixIcon),
+      suffixIcon: Icon(suffixIcn),
     );
   }
 }
