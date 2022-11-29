@@ -6,40 +6,24 @@ class CustomWidget001 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Card(
-              elevation: 3,
-              child: Container(
-                height: 100,
-                color: Colors.white54,
-                child: ListView.builder(
-                  itemBuilder: (context, index) => const Padding(
-                    padding: EdgeInsets.all(11),
-                    child: SizedBox(
-                      width: 100,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.green,
-                      ),
-                    ),
-                  ),
-                  itemCount: 10,
-                  scrollDirection: Axis.horizontal,
-                ),
-              ),
-            ),
-            Card(
-              elevation: 3,
-              child: Container(
-                width: 400,
-                height: 400,
-                color: Colors.red,
-              ),
-            ),
-          ],
-        ),
+      margin: const EdgeInsets.all(21),
+      width: 100,
+      height: 100,
+      color: Colors.red,
+    );
+  }
+}
+
+class WidgetsListView extends StatelessWidget {
+  const WidgetsListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 120,
+        height: 200,
+        color: Colors.green,
       ),
     );
   }

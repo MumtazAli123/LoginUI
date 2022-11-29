@@ -45,22 +45,14 @@ _buildBody() {
             ),
             TextField(
               decoration: UIConfig().inputDecoration(
-                'Your Email',
-                "Email",
-                Icons.email,
-                null,
-              ),
+                  'Your Email', "Email", Icons.email, null, null),
             ),
             const SizedBox(
               height: 11,
             ),
             TextFormField(
-              decoration: UIConfig().inputDecoration(
-                'Your Password',
-                'Password',
-                Icons.lock,
-                Icons.visibility,
-              ),
+              decoration: UIConfig().inputDecoration('Your Password',
+                  'Password', Icons.lock, Icons.visibility, null),
               obscureText: true,
             ),
             Container(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/screens/sidebar_screen/sidebar_screen.dart';
 import 'package:untitled1/widgets/custom_bottom.dart';
 import 'package:untitled1/widgets/input_decoration.dart';
 
@@ -11,6 +10,8 @@ class SigningScreen extends StatefulWidget {
 }
 
 class _SigningScreenState extends State<SigningScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,25 +57,26 @@ _buildBody() {
             Container(
               margin: const EdgeInsets.only(bottom: 11),
               child: TextField(
-                decoration: UIConfig()
-                    .inputDecoration('Your Name', "Name", Icons.person, null),
+                decoration: UIConfig().inputDecoration(
+                    'Your Name', "Name", Icons.person, null, null),
               ),
             ),
             TextField(
-              decoration: UIConfig()
-                  .inputDecoration('Your Email', "Email", Icons.email, null),
+              decoration: UIConfig().inputDecoration(
+                  'Your Email', "Email", Icons.email, null, null),
             ),
             const SizedBox(
               height: 11,
             ),
             TextFormField(
               obscureText: true,
-              decoration: UIConfig().inputDecoration(
-                'Your Password',
-                'Password',
-                Icons.lock,
-                Icons.visibility,
-              ),
+              validator: (value) {
+                if (value == null || value.isEmpty || value.length < 4) {
+                  return 'Please enter strong password';
+                }
+              },
+              decoration: UIConfig().inputDecoration('Your Password',
+                  'Password', Icons.lock, Icons.visibility, null),
             ),
             Container(
               margin: const EdgeInsets.all(21),

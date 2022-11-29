@@ -6,18 +6,22 @@ class UIConfig {
     String labelText,
     IconData? prefixIcon,
     IconData? suffixIcn,
+    void Function()? onTap,
   ) {
     return InputDecoration(
-      isDense: true,
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
-      fillColor: Colors.blue,
-      hintText: hintText,
-      labelText: labelText,
-      prefixIcon: Icon(prefixIcon),
-      suffixIcon: Icon(suffixIcn),
-    );
+        isDense: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
+        fillColor: Colors.blue,
+        hintText: hintText,
+        labelText: labelText,
+        prefixIcon: Icon(prefixIcon),
+        suffixIcon: InkWell(
+          onTap: onTap,
+          child: Icon(suffixIcn),
+        ));
   }
 }
